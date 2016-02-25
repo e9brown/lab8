@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="/css/introHCI.css" rel="stylesheet">
+  <link href="/css/introHCI.css" rel="stylesheet"
+  
   <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -27,6 +28,8 @@
         <p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
         <p class="facebookLogin">
           Please login through Facebook
+	  <fb:login-button class="facebookLogin" scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
         </p>
     </div>
 
@@ -35,13 +38,13 @@
       <img id="photo" class='img-responsive' src="images/lorempixel.people.1.jpeg" />
     </div>
 
-    <!--
+    
     <div id="camera" class="profile">
       <canvas id="camera-canvas"></canvas>
       <video autoplay id="camera-video"></video>
       <button id="camera-button">Take Photo</button>
     </div>
-    -->
+    
 
     <div id="googleMaps" class="profile">
       <h1>Where am I?</h1>
@@ -54,7 +57,11 @@
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/canvas-to-blob.min.js"></script>
   <script src="/js/introHCI.js"></script>
-
+  {{> facebook}}
+  <script src="/js/facebook.js"></script>
+  {{> googleMaps}}
+<script src="/js/googleMaps.js"></script>
+<script src="/js/camera.js"></script>
 </body>
 </html>
 
